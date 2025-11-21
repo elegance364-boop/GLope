@@ -1,0 +1,231 @@
+body {
+    background-color: rgb(14, 20, 37);
+    font-family: "PT sans";
+    height: 3000px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.general-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-width: 1000px;
+}
+
+.ligne {
+    display: flex;
+    flex: 1;
+    margin-top: 80px;
+}
+
+.logo {
+    width: 700px;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+
+}
+
+.search {
+    width: 650px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+}
+
+.search:focus {
+    outline-style: solid;
+    outline-color: rgb(119, 119, 214);
+}
+
+
+
+.search-image {
+    width: 100%;
+    height: 100%;
+}
+
+.buttonss {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.glope,
+.infos {
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    font-size: 17px;
+    height: 40px;
+    width: 100px;
+    cursor: pointer;
+    background-color: rgb(29, 31, 54);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+
+.glope:hover {
+    background-color: rgb(148, 157, 238);
+    color: rgb(29, 31, 54);
+    box-shadow: 10px 5px 5px rgb(0, 0, 0);
+}
+
+.infos:hover {
+    background-color: rgb(148, 157, 238);
+    color: rgb(29, 31, 54);
+    box-shadow: 10px 5px 5px rgb(0, 0, 0);
+}
+
+.user {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: rgb(70, 73, 102);
+    box-shadow: 3px 5px 5px black;
+    border-radius: 6px;
+    transition: box-shadow 0.5s, background-color 0.5s;
+}
+
+.account {
+    position: fixed;
+    right: 20px;
+    top: 10px;
+    padding-left: 30px;
+    padding-bottom: 165px;
+    border-width: 1px;
+}
+
+.settings,
+.more,
+.logout {
+    width: 20px;
+}
+
+
+.profile {
+    border-radius: 90px;
+    width: 35px;
+    height: 40px;
+}
+
+.user:hover {
+    box-shadow: 10px 10px 5px black;
+    cursor: pointer;
+    background-color: rgb(56, 61, 107);
+}
+
+
+.news1-picture {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+
+}
+
+.news1-container {
+    width: 200px;
+    height: 296px;
+    margin-left: 50px;
+    background-color: rgb(21, 21, 114);
+    border: solid;
+    border-radius: 20px;
+    border-color: rgb(21, 21, 114);
+    overflow: hidden;
+    transition: transform 0.5s;
+    animation: scrolling linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    margin-top: 0;
+}
+
+.news1-container:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 350px);
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+    justify-content: center;
+    align-content: start;
+}
+
+.title {
+    color: antiquewhite;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+
+@media (max-width: 1660px) {
+    .grid {
+        grid-template-columns: 350px 350px 350px 350px;
+    }
+}
+
+@media (max-width: 1330px) {
+    .grid {
+        grid-template-columns: 350px 350px 350px;
+    }
+}
+
+@media (max-width: 980px) {
+    .grid {
+        grid-template-columns: 350px 350px;
+    }
+}
+
+
+@keyframes scrolling {
+    from {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+        transform: translateX(0px);
+    }
+}

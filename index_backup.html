@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLope</title>
+</head>
+
+<body>
+    <div class="general-container">
+        <div class="search-container">
+            <div class="logo-container"><img src="pictures/logo-transparent-png.png" alt="" class="logo"></div>
+            <div class="search-bar">
+                <input type="text" class="search">
+
+            </div>
+            <div class="buttonss">
+                <div><button class="infos">Infos</button></div>
+                <button class="glope">Globe ©</button>
+            </div>
+
+        </div>
+
+        <div class="account">
+            <div class="user-container"><button class="user"></button></div>
+            <div class="settings-container"><button class="user"><img src="pictures/parametres.png" alt=""
+                        class="settings"></button>
+            </div>
+            <div class="more-container"><button class="user"><img src="pictures/options.png" alt=""
+                        class="more"></button></div>
+            <div class="logout-container"><button class="user"><img src="pictures/se-deconnecter.png" alt=""
+                        class="logout"></button>
+            </div>
+
+        </div>
+
+    </div>
+    <hr class="ligne">
+    <div></div>
+    <script>
+        const searchInput = document.querySelector(".search");
+
+        searchInput.addEventListener("keydown", function (e) {
+            if (e.key === "Enter") {
+                const query = searchInput.value.trim();
+                if (query !== "") {
+                    window.location.href = "results.html?q=" + encodeURIComponent(query);
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

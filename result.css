@@ -1,0 +1,66 @@
+body {
+    background-color: rgb(14, 20, 37);
+    font-family: "PT sans";
+}
+
+.logo {
+    width: 300px;
+}
+
+.top-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.user {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: rgb(70, 73, 102);
+    box-shadow: 3px 5px 5px black;
+    border-radius: 6px;
+    transition: box-shadow 0.5s, background-color 0.5s;
+    position: absolute;
+    right: 10px;
+    top: 30px;
+}
+
+
+.profile {
+    border-radius: 90px;
+    width: 35px;
+    height: 40px;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+
+}
+
+.search-bar {
+    width: 650px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    margin-top: 40px;
+
+}
+
+.search-bar:focus {
+    outline-style: solid;
+    outline-color: rgb(119, 119, 214);
+}
+
+.user:hover {
+    box-shadow: 10px 10px 5px black;
+    cursor: pointer;
+    background-color: rgb(56, 61, 107);
+}
