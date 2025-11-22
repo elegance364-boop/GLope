@@ -91,15 +91,17 @@ a {
     border: none;
     color: white;
     border-radius: 10px;
+
+}
+
+.infos {
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
-
-.glope:hover {
-    background-color: rgb(148, 157, 238);
-    color: rgb(29, 31, 54);
-    box-shadow: 10px 5px 5px rgb(0, 0, 0);
+.glope {
+    transition: 0.5s;
 }
+
 
 .infos:hover {
     background-color: rgb(148, 157, 238);
@@ -194,6 +196,27 @@ a {
     line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+
+
+.glope::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background: radial-gradient(circle, rgb(0, 60, 255), rgba (0, 0, 0, 0));
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.glope:hover {
+    background-color: #df3d73;
+    box-shadow: 0 0 15px #df3d73, 0 0 10px #00ccff, 0 0 20px #df3d73;
+}
+
+.glope:hover::before {
+    opacity: 1;
 }
 
 
